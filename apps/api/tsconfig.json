@@ -8,7 +8,12 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@jobease/shared-types": ["../../packages/shared-types/dist"],
+      "@jobease/field-engine": ["../../packages/field-engine/dist"]
+    }
   },
   "include": ["src/**/*"]
 }

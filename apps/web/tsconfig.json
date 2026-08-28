@@ -15,7 +15,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@jobease/shared-types": ["../../packages/shared-types/src"]
+      "@jobease/shared-types": ["../../packages/shared-types/dist"]
     }
   },
   "include": ["src"]
