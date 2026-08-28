@@ -1,0 +1,23 @@
+{
+  "name": "jobease-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JobEase - Intelligent Job Application Autofill Assistant",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace=apps/api",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:extension": "npm run dev --workspace=apps/extension",
+    "build:types": "npm run build --workspace=packages/shared-types",
+    "build:engine": "npm run build --workspace=packages/field-engine",
+    "build:all": "npm run build:types && npm run build:engine && npm run build --workspace=apps/api && npm run build --workspace=apps/web && npm run build --workspace=apps/extension",
+    "test:engine": "npm test --workspace=packages/field-engine",
+    "test": "npm test --workspace=packages/field-engine"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
