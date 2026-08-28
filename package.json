@@ -13,7 +13,11 @@
     "dev:extension": "npm run dev --workspace=apps/extension",
     "build:types": "npm run build --workspace=packages/shared-types",
     "build:engine": "npm run build --workspace=packages/field-engine",
-    "build:all": "npm run build:types && npm run build:engine && npm run build --workspace=apps/api && npm run build --workspace=apps/web && npm run build --workspace=apps/extension",
+    "build:api": "npm run build --workspace=apps/api",
+    "build:web": "npm run build --workspace=apps/web",
+    "build:extension": "npm run build --workspace=apps/extension",
+    "build": "npm run build:types && npm run build:engine && npm run build:api && npm run build:web",
+    "vercel-build": "npm run build:types && npm run build:engine && npm run build:api && npm run build:web",
     "test:engine": "npm test --workspace=packages/field-engine",
     "test": "npm test --workspace=packages/field-engine"
   },
